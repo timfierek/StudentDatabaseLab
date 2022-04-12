@@ -22,15 +22,6 @@ public class Student {
 		return name;
 	}
 	
-	public String getFirstName() {
-		if(name.indexOf(' ') == -1) {
-			return name;
-		}
-		else {
-			return name.substring(0, name.indexOf(' '));
-		}
-	}
-	
 	public String getFavoriteFood() {
 		return favFood;
 	}
