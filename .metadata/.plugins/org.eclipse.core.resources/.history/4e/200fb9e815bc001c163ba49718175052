@@ -38,17 +38,16 @@ public class DatabaseMain {
 			String studentName = stuDat[stuNum].getName();
 			String firstName = stuDat[stuNum].getFirstName();
 			
-			System.out.print("\nStudent " + (stuNum = 1) + " is " 
+			System.out.print("Student " + stuNum + " is " 
 					+ studentName + ". What would you like to know about "
 					+ firstName + "? ");
 			infoSelection = getInfoSelection(in);
 			
 			if(infoSelection.equals("hometown")) {
-				System.out.print("\n" +firstName + " is from " + stuDat[stuNum].getHometown() + ". ");
+				System.out.print(firstName + " is from " + stuDat[stuNum].getHometown() + ". ");
 			}
 			else if(infoSelection.equals("favorite food")) {
-				System.out.print("\n" +firstName + "'s favorite food is " 
-						+ stuDat[stuNum].getFavoriteFood() + ". ");
+				System.out.print(firstName + "'s favorite food is " + stuDat[stuNum].getFavoriteFood() + ". ");
 			}
 			
 		} while(loop);
@@ -69,10 +68,10 @@ public class DatabaseMain {
 				}
 			
 			} catch (InputMismatchException e) {
-				System.out.print("\nInput must be an integer. Try again: ");
+				System.out.print("That student does not exist. Please try again. (enter a number 1-10): ");
 				in.nextLine();
 			} catch (IndexOutOfBoundsException e) {
-				System.out.print("\nThat student does not exist. Please try again. (enter a number 1-10): ");
+				System.out.print("That student does not exist. Please try again. (enter a number 1-10): ");
 				in.nextLine();
 			}
 		}
@@ -85,7 +84,7 @@ public class DatabaseMain {
 		String selection = in.nextLine().toLowerCase();
 		
 		while(!selection.equals("hometown") && !selection.equals("favorite food")) {
-			System.out.print("\nThat data does not exist. Please try again. "
+			System.out.print("That data does not exist. Please try again. "
 					+ "(enter \"hometown\" or \"favorite food\"): ");
 			selection = in.nextLine().toLowerCase();
 		}

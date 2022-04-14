@@ -29,7 +29,7 @@ public class DatabaseMain {
 		stuDat[9] = new Student("John Doe", "Lettuce", "Muskegon");
 		
 		Scanner in = new Scanner(System.in);
-		boolean loop = false;
+		boolean loop = true;
 		int stuNum = -1;
 		String infoSelection = "";
 		
@@ -38,7 +38,7 @@ public class DatabaseMain {
 			String studentName = stuDat[stuNum].getName();
 			String firstName = stuDat[stuNum].getFirstName();
 			
-			System.out.print("\nStudent " + (stuNum = 1) + " is " 
+			System.out.print("Student " + (stuNum = 1) + " is " 
 					+ studentName + ". What would you like to know about "
 					+ firstName + "? ");
 			infoSelection = getInfoSelection(in);
